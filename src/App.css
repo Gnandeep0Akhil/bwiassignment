@@ -1,38 +1,357 @@
-.App {
+/* Login page styles. */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
+  width: 30%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="username"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="username"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #684caf;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #684caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #42306f;
+}
+
+/* Navigation bar styles. */
+
+.navbar {
+  background-color: #684caf;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav-item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link-price {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link:hover {
+  color: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #684caf;
+}
+
+.search-button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #684caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #42306f;
+}
+
+/* Course list card styles */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 70px 20px;
+}
+
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -18px;
+  background-color: red;
+  color: white;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-size: smaller;
+}
+
+/* Profile Picture */
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  overflow: hidden;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Menu */
+
+.menu {
+  position: absolute;
+  top: 80%;
+  right: 3%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: #ddd;
+}
+
+/* Card styles */
+
+.product-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 500px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border-color: #684caf;
+  overflow: hidden;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cart button styles */
+
+.add-to-cart-button {
+  margin-top: 5px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.add-to-cart-button button {
+  padding: 5px 10px;
+  background-color: #684caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button button:hover {
+  background-color: #42306f;
+}
+
+.add-to-cart-button button.added-to-cart {
+  background-color: green;
+  color: white;
+}
+
+.discount-label {
+  background-color: #f00;
+  color: #fff;
+  font-size: small;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.product-details {
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  width: 350px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.numero {
+  color: dimgrey;
+  font-weight: bold;
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffcc00;
+}
+
+/* Filter Styles */
+
+.filter select {
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #684caf;
+  border-radius: 5px;
+}
+
+.filter select:hover {
+  background-color: #e8e8e8;
+}
+
+.filter select option {
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #684caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter button:hover {
+  background-color: #42306f;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  margin: 20px 50px 30px 50px;
+  justify-content: right;
 }
